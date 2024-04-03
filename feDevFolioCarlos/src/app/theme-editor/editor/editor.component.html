@@ -1,0 +1,86 @@
+<div class="p-4">
+  <h2 class="text-xl font-semibold mb-6">Theme Editor</h2>
+  <form [formGroup]="themeForm!" class="space-y-6">
+    <!-- Avatar Shape -->
+    <div>
+      <label for="avatarShape" class="block text-sm font-medium mb-2"
+        >Avatar Shape</label
+      >
+      <select
+        id="avatarShape"
+        formControlName="avatarShape"
+        class="w-full border-gray-300 rounded-md shadow-sm"
+      >
+        <option value="circle">Circle</option>
+        <option value="square">Square</option>
+      </select>
+    </div>
+
+    <!-- Text Color -->
+    <div>
+      <label for="textColor" class="block text-sm font-medium mb-2"
+        >Name/Bio Text Color</label
+      >
+      <input
+        type="color"
+        id="textColor"
+        formControlName="textColor"
+        class="w-16 border-gray-300 rounded-md shadow-sm p-1"
+      />
+    </div>
+
+    <!-- Link Block Styles -->
+    <div>
+      <label for="borderRadius" class="block text-sm font-medium mb-2"
+        >Link Block Styles</label
+      >
+      <!-- Border Radius -->
+      <div class="mb-4">
+        <label for="borderRadius" class="block mb-1">Border Radius</label>
+        <input
+          type="range"
+          id="borderRadius"
+          formControlName="borderRadius"
+          min="0"
+          max="20"
+          class="w-full"
+        />
+        <span class="inline-block mt-2"
+          >{{ themeForm?.get("borderRadius")?.value }}px</span
+        >
+      </div>
+
+      <!-- Background Color -->
+      <div class="mb-4">
+        <label for="backgroundColor" class="block mb-1">Background Color</label>
+        <input
+          type="color"
+          id="backgroundColor"
+          formControlName="backgroundColor"
+          class="w-16 border-gray-300 rounded-md shadow-sm p-1"
+        />
+      </div>
+
+      <!-- Text Color -->
+      <div>
+        <label for="linkTextColor" class="block mb-1">Text Color</label>
+        <input
+          type="color"
+          id="linkTextColor"
+          formControlName="linkTextColor"
+          class="w-16 border-gray-300 rounded-md shadow-sm p-1"
+        />
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div>
+      <button
+        type="submit"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Apply Changes
+      </button>
+    </div>
+  </form>
+</div>

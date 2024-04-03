@@ -1,0 +1,13 @@
+<div class="flex flex-col md:flex-row">
+  <!-- Editor -->
+  <div class="w-full md:w-4/10">
+    <app-editor (themeChanged)="themeChange($event)"></app-editor>
+  </div>
+  <!-- Profile Preview -->
+  <div class="mt-5 w-full md:w-6/10 flex justify-center items-center h-full">
+    <app-profile-preview
+      [user]="user"
+      [theme]="currentTheme"
+    ></app-profile-preview>
+  </div>
+</div>
