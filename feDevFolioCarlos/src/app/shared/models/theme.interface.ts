@@ -1,4 +1,4 @@
-export interface ThemeEditor {
+export interface Theme {
   avatarShape: 'circle' | 'square';
   textColor: string;
   borderRadius: number;
