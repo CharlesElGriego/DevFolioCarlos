@@ -1,16 +1,16 @@
 @if (theme()) {
 <app-profile>
   <app-profile-box
-    [textColor]="theme()?.textColor"
-    [borderRadius]="theme()?.borderRadius + 'px'"
-    [backgroundColor]="theme()?.backgroundColor"
+    [textColor]="theme().textColor"
+    [borderRadius]="theme().borderRadius + 'px'"
+    [backgroundColor]="theme().backgroundColor"
   >
     <app-profile-avatar
       [avatarUrl]="user.avatar"
-      [avatarShape]="theme()?.avatarShape"
+      [avatarShape]="theme().avatarShape"
     >
     </app-profile-avatar>
-    <app-profile-details [linkTextColor]="theme()?.linkTextColor">
+    <app-profile-details [linkTextColor]="theme().linkTextColor">
       <div>
         <h2>{{ user.name }}</h2>
         <p>{{ user.bio }}</p>
