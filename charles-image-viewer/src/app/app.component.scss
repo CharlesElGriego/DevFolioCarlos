@@ -1,0 +1,31 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header,
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+header {
+  top: 0;
+}
+
+footer {
+  bottom: 0;
+}
+
+main {
+  overflow: hidden;
+}
+
+.flex-row,
+.flex-col {
+  display: flex;
+}
