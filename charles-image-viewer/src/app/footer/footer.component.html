@@ -3,3 +3,16 @@
     <p>Built By: Carlos Navarro</p>
   </div>
 </footer>
+<button
+  class="fixed bottom-8 right-5 bg-red-700 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
+  (click)="fileInput.click()"
+>
+  +
+</button>
+<input
+  type="file"
+  accept=".png, .jpg, .jpeg"
+  #fileInput
+  (change)="handleFileInput($any($event.target)!.files)"
+  hidden
+/>

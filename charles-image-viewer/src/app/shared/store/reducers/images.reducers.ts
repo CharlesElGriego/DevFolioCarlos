@@ -19,6 +19,6 @@ export const imageReducer = createReducer(
   })),
   on(ImageActions.addImage, (state, { image }) => ({
     ...state,
-    images: [...state.images, image],
+    images: [image, ...state.images],
   }))
 );
