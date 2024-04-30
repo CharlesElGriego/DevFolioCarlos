@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { StoreModule } from '@ngrx/store';
 import { ImageGalleryComponent } from './image-gallery.component';
 
 describe('ImageGalleryComponent', () => {
@@ -8,10 +10,10 @@ describe('ImageGalleryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ImageGalleryComponent]
-    })
-    .compileComponents();
-    
+      imports: [ImageGalleryComponent, StoreModule.forRoot({})],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(ImageGalleryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
