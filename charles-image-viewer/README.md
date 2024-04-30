@@ -1,27 +1,57 @@
-# CharlesImageViewer
+# Charles Image Viewer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+## Description
 
-## Development server
+Charles Image Viewer is a web application built with Angular that allows users to view and manage a collection of images. The interface is fully responsive, ensuring an optimal experience on both mobile and desktop devices.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **Image Display**: The application displays images in a layout optimized for the device being used:
+  - **Mobile Mode**: Images are presented in a horizontally scrollable list. Selecting an image displays it in detail at the bottom of the screen.
+  - **Desktop Mode**: Images are displayed in two vertical columns; the left column shows a vertically scrollable list of images, and the right column displays the selected image in detail.
+- **Add Images**: A floating button with a `+` symbol is always visible at the bottom-right corner of the screen. Clicking this button opens a file input dialog that allows users to select and add new images to the collection.
+- **Responsive Layout**: The UI adjusts seamlessly between mobile and desktop layouts, providing an intuitive and consistent user experience across devices.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
 
-## Build
+- Angular
+- NgRx for state management
+- Tailwind CSS for styling
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Getting Started
 
-## Running unit tests
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Prerequisites
 
-## Running end-to-end tests
+Ensure you have Node.js v18 installed on your machine. This will include npm (Node Package Manager) which is necessary to install dependencies and run the project.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Installing
 
-## Further help
+Follow these steps to get your development environment running:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. **Clone the repository**
+
+   ```bash
+   git clone {{ url }}
+
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+3. **Start the development server**
+   ```bash
+    npm run start
+   ```
+   This will start the development server and open the application in your default web browser. The application will be running at http://localhost:4200/.
+
+## Usage
+
+- **Viewing Images:** Simply scroll through the list of images. Click on any image to view it in detail in the designated area.
+- **Adding Images:** Click the + button and select an image file from your device to add it to the viewer. The image will be processed and displayed immediately.
+
+## License
+
+This project is licensed under the MIT License.
