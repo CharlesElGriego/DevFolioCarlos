@@ -8,7 +8,9 @@ Charles Image Viewer is a web application built with Angular that allows users t
 
 - **Image Display**: The application displays images in a layout optimized for the device being used:
   - **Mobile Mode**: Images are presented in a horizontally scrollable list. Selecting an image displays it in detail at the bottom of the screen.
+    ![Mobile Mode](./mobile.png)
   - **Desktop Mode**: Images are displayed in two vertical columns; the left column shows a vertically scrollable list of images, and the right column displays the selected image in detail.
+    ![Desktop Mode](./desktop.png)
 - **Add Images**: A floating button with a `+` symbol is always visible at the bottom-right corner of the screen. Clicking this button opens a file input dialog that allows users to select and add new images to the collection.
 - **Responsive Layout**: The UI adjusts seamlessly between mobile and desktop layouts, providing an intuitive and consistent user experience across devices.
 
@@ -33,7 +35,7 @@ Follow these steps to get your development environment running:
 1. **Clone the repository**
 
    ```bash
-   git clone {{ url }}
+   git clone https://github.com/CharlesElGriego/Charles-image-viewer.git
 
    ```
 
