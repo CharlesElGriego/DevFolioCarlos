@@ -1,4 +1,3 @@
-// src/app/state/images/image.reducer.ts
 import { createReducer, on } from '@ngrx/store';
 import * as ImageActions from '../actions/image.actions';
 import { initialImageState } from '../states/image.state';

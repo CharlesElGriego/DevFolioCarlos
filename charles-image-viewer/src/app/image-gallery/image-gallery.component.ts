@@ -25,10 +25,10 @@ export class ImageGalleryComponent implements OnDestroy {
   private subscription: Subscription;
   constructor(private store: Store) {
     this.store.dispatch(loadImages());
-    this.subscription = this.images$.subscribe((_) => {});
+    this.subscription = this.images$.subscribe(() => {});
   }
   ngOnDestroy(): void {
-    this.subscription.unsubscribe;
+    this.subscription.unsubscribe();
   }
   onSelect(image: Image): void {
     this.store.dispatch(selectImage({ image }));

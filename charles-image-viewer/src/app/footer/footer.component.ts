@@ -19,10 +19,10 @@ export class FooterComponent {
       reader.onload = (event: any) => {
         const newImage = {
           id: Date.now().toString(),
-          url: event.target.result,
-          download_url: event.target.result,
+          url: event?.target?.result,
+          download_url: event?.target?.result,
           author: 'User',
-          height: 200, // Estos valores pueden ser ajustados
+          height: 200,
           width: 200,
         };
         this.store.dispatch(addImage({ image: newImage }));

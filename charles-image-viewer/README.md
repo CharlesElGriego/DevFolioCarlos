@@ -48,6 +48,12 @@ Follow these steps to get your development environment running:
     npm run start
    ```
    This will start the development server and open the application in your default web browser. The application will be running at http://localhost:4200/.
+4. **Testing**
+   ```bash
+    npm run test
+   ```
+   This will run the unit tests for the application.
+   ![Test Results](./test.png)
 
 ## Usage
 
