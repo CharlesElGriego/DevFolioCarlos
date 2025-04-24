@@ -1,0 +1,30 @@
+.task-board {
+  padding: 24px;
+
+  &__actions {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  &__columns {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    padding-bottom: 16px;
+
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+  }
+}
