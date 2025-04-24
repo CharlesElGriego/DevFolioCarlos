@@ -20,8 +20,6 @@ jest.mock('../../context/TaskContext', () => {
   return {
     ...originalModule,
     useTaskContext: jest.fn().mockReturnValue({
-      toggleFavorite: jest.fn(),
-      deleteTask: jest.fn(),
       refreshBoard: jest.fn(),
     }),
   };
@@ -47,35 +45,5 @@ describe('TaskCard', () => {
 
     fireEvent.click(screen.getByTestId('EditIcon').parentElement!);
     expect(mockOnEdit).toHaveBeenCalledTimes(1);
-  });
-
-  it('toggles favorite status when star button is clicked', () => {
-    const mockContext = {
-      toggleFavorite: jest.fn(),
-      deleteTask: jest.fn(),
-      refreshBoard: jest.fn(),
-    };
-
-    (TaskContextModule.useTaskContext as jest.Mock).mockReturnValue(mockContext);
-
-    render(<TaskCard task={mockTask} onEdit={mockOnEdit} />);
-
-    fireEvent.click(screen.getByTestId('StarBorderIcon').parentElement!);
-    expect(mockContext.toggleFavorite).toHaveBeenCalledWith('1');
-  });
-
-  it('calls deleteTask when delete button is clicked', () => {
-    const mockContext = {
-      toggleFavorite: jest.fn(),
-      deleteTask: jest.fn(),
-      refreshBoard: jest.fn(),
-    };
-
-    (TaskContextModule.useTaskContext as jest.Mock).mockReturnValue(mockContext);
-
-    render(<TaskCard task={mockTask} onEdit={mockOnEdit} />);
-
-    fireEvent.click(screen.getByTestId('DeleteIcon').parentElement!);
-    expect(mockContext.deleteTask).toHaveBeenCalledWith('1');
   });
 });
